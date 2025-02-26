@@ -63,11 +63,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const surgeryInfo = surgeryHistory ? `HISTÓRICO DE CIRURGIAS: ${surgeryHistory}.` : "";
         
         const doctor = document.getElementById("doctor").value.toUpperCase();
-        const doctorInfo = doctor ? `O EXAME FOI INDICADO PELO MÉDICO ${doctor}.` : "";
+        const doctorInfo = doctor ? `EXAME INDICADO PARA MÉDICO ${doctor}.` : "";
         
         const technician = document.getElementById("technician").value.toUpperCase();
         
-        const story = `O PACIENTE REALIZOU EXAME POR MOTIVO DE ${examReason}.\nO EXAME FOI FEITO ${contrast === "SIM" ? "COM" : "SEM"} CONTRASTE.\n${cancerInfo ? cancerInfo + "\n" : ""}${surgeryInfo ? surgeryInfo + "\n" : ""}${doctorInfo ? doctorInfo + "\n" : ""}O EXAME FOI REALIZADO PELO TÉCNICO ${technician}.`;
+        const story = `MOTIVO DO EXAME: ${examReason}.\nO EXAME FOI FEITO ${contrast === "SIM" ? "COM" : "SEM"} CONTRASTE.\n${cancerInfo ? cancerInfo + "\n" : ""}${surgeryInfo ? surgeryInfo + "\n" : ""}${doctorInfo ? doctorInfo + "\n" : ""}O EXAME FOI REALIZADO PELO TÉCNICO ${technician}.`;
         
         patientStory.textContent = story;
         patientStory.contentEditable = "true";
