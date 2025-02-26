@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const surgeryInfo = surgeryHistory ? `HISTÓRICO DE CIRURGIAS: ${surgeryHistory}.` : "";
         
         const doctor = document.getElementById("doctor").value.toUpperCase();
-        const doctorInfo = doctor ? `EXAME INDICADO PARA MÉDICO ${doctor}.` : "";
+        const doctorInfo = doctor ? `EXAME INDICADO PARA ${doctor}.` : "";
         
         const technician = document.getElementById("technician").value.toUpperCase();
         
