@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História do Paciente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>História do Paciente</h1>
+        <form id="patient-form">
+            <label for="exam-reason">Motivo do Exame:</label>
+            <input type="text" id="exam-reason" required>
+            
+            <label for="contrast">Exame com Contraste:</label>
+            <select id="contrast">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+            
+            <label for="cancer-history">Já tratou algum tipo de câncer?</label>
+            <select id="cancer-history">
+                <option value="Não">Não</option>
+                <option value="Sim">Sim</option>
+            </select>
+            
+            <div id="cancer-details" class="hidden">
+                <label for="cancer-type">Tipo de Câncer:</label>
+                <input type="text" id="cancer-type">
+                
+                <fieldset>
+                    <legend>Tratamentos Realizados:</legend>
+                    <label><input type="checkbox" id="treatment-chemo"> Quimioterapia</label>
+                    <label><input type="checkbox" id="treatment-radio"> Radioterapia</label>
+                    <label><input type="checkbox" id="treatment-immuno"> Imunoterapia</label>
+                </fieldset>
+            </div>
+            
+            <label for="surgery-history">Histórico de Cirurgias:</label>
+            <textarea id="surgery-history" rows="3" placeholder="Descreva as cirurgias realizadas..."></textarea>
+            
+            <label for="doctor">Indicação Médica:</label>
+            <input type="text" id="doctor">
+            
+            <label for="technician">Nome do Técnico:</label>
+            <input type="text" id="technician">
+            
+            <button type="submit">Gerar História</button>
+        </form>
+
+        <div class="lot-section">
+            <label for="lot-number">Número de Lote:</label>
+            <input type="text" id="lot-number">
+            <button id="save-lot">Salvar</button>
+            <p id="lot-display"></p>
+        </div>
+
+        <div id="story-container">
+            <h2>História do Paciente</h2>
+            <p id="patient-story" contenteditable="true"></p>
+            <button id="copy-button" style="display: none;">Copiar</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
